@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class KnifeNote : MonoBehaviour
 {
-    private float dropSpeed = 6f;
-    private float endy = 23.9f;
-    private float initialWaitSecond = 1f;
-    private float endWaitSecond = 1f;
+    private float dropSpeed = 40f;
+    private float endy = 23.8f;
+    private float initialWaitSecond = 0.4f;
+    private float endWaitSecond = 0.2f;
     
     // Start is called before the first frame update
     void Start()
