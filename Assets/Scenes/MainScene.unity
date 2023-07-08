@@ -1018,8 +1018,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1991814665}
-  m_LocalRotation: {x: 0.20802705, y: 0.6726992, z: -0.20583935, w: 0.67958134}
-  m_LocalPosition: {x: -56.385433, y: 54.841393, z: 0.9312209}
+  m_LocalRotation: {x: 0.390733, y: 0.5891897, z: -0.39019188, w: 0.58985895}
+  m_LocalPosition: {x: -16.794346, y: 40.416115, z: 1.7109275}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1269,7 +1269,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979116527100888886}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -10, y: 22.41, z: 2.2}
+  m_LocalPosition: {x: -10, y: 22.5, z: 2.2}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1292,6 +1292,8 @@ GameObject:
   - component: {fileID: 680725036892900033}
   - component: {fileID: 2696872111450720005}
   - component: {fileID: 8377895766084830472}
+  - component: {fileID: 8377895766084830474}
+  - component: {fileID: 8377895766084830473}
   m_Layer: 0
   m_Name: Herring
   m_TagString: Untagged
@@ -1903,7 +1905,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979116527100888886}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 0b04b4ee27b36df4c94e4df3ea384a9f, type: 3}
   m_Controller: {fileID: 9100000, guid: 63d47b8153b834c49b583764921e7df6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -1915,6 +1917,36 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8377895766084830473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979116527100888886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00bb00728d5faf04f9a0c3ad2121d546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!143 &8377895766084830474
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979116527100888886}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 0.1
+  m_Radius: 0.1
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.0001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8437869833768472549
 GameObject:
   m_ObjectHideFlags: 0
