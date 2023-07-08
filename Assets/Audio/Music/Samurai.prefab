@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6050067080770897159}
   - component: {fileID: 8541390266812915480}
   - component: {fileID: 1179934529}
-  - component: {fileID: 1179934532}
+  - component: {fileID: 2539048915322820981}
   m_Layer: 0
   m_Name: Samurai
   m_TagString: Untagged
@@ -146,7 +146,7 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &1179934532
+--- !u!114 &2539048915322820981
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
