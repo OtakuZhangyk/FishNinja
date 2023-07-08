@@ -193,3 +193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf239a71e172314cb24fcdeae1f00e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yellClip: {fileID: 8300000, guid: 24cc119c996b2f04a8b5218c814077e4, type: 3}
+  dropClip: {fileID: 8300000, guid: 07f53459829ee094dbe035daee412e3b, type: 3}
+  hitClip: {fileID: 8300000, guid: 1b06227218c50754389fc279b9e85710, type: 3}
