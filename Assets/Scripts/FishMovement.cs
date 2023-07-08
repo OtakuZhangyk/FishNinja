@@ -6,7 +6,7 @@ public class FishMovement : MonoBehaviour
 {
 
     private CharacterController characterController;
-    public speed = 5f;
+    public float speed = 5f;
     // Start is called before the first frame update
     void Start()
     {
