@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Beatmap : MonoBehaviour
 {
-    public GameObject KnifeNote;
+    public GameObject KnifeChild;
     public GameObject KnifeSpawn0;
     public GameObject KnifeSpawn1;
     public GameObject KnifeSpawn2;
+    public GameObject KnifeParent;
 
     public void SpawnNote()
     {
-        GameObject childKnifeNote = Instantiate(KnifeNote, KnifeSpawn0.transform);
+        GameObject Note = Instantiate(KnifeChild, KnifeSpawn1.transform.position, KnifeSpawn1.transform.rotation, KnifeParent.transform);
     }
     
     
