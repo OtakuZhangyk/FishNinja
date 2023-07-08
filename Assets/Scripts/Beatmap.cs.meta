@@ -3,7 +3,11 @@ guid: 058f857ebf12b694b848d9dcce5fb991
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - KnifeNote: {instanceID: 0}
+  - KnifeSpawn0: {instanceID: 0}
+  - KnifeSpawn1: {instanceID: 0}
+  - KnifeSpawn2: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
