@@ -11,14 +11,14 @@ public class Beatmap : MonoBehaviour
 
     public void SpawnNote()
     {
-        Instantiate(KnifeNote, KnifeSpawn0.transform);
+        GameObject childKnifeNote = Instantiate(KnifeNote, KnifeSpawn0.transform);
     }
     
     
     // Start is called before the first frame update
     void Start()
     {
-        SpawnNote();
+        //SpawnNote();
     }
 
     // Update is called once per frame
