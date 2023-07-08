@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6050067080770897159}
   - component: {fileID: 8541390266812915480}
+  - component: {fileID: 1179934529}
+  - component: {fileID: 1179934532}
   m_Layer: 0
   m_Name: Samurai
   m_TagString: Untagged
@@ -43,7 +45,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 3318ed0ed9246da45b0ba2e384b1faa3, type: 2}
   m_audioClip: {fileID: 8300000, guid: cfdbb2ae37a1ab149b4228f448c005c9, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -128,3 +130,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!111 &1179934529
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661136508748145677}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 9f66f620afbba2640b3f6c709b95f86f, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 9f66f620afbba2640b3f6c709b95f86f, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &1179934532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661136508748145677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058f857ebf12b694b848d9dcce5fb991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KnifeChild: {fileID: 3320296480837691988, guid: 387eb38e5dfff7b4d832ccee00819ebc, type: 3}
+  KnifeSpawn0: {fileID: 0}
+  KnifeSpawn1: {fileID: 0}
+  KnifeSpawn2: {fileID: 0}
+  KnifeParent: {fileID: 0}
