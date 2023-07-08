@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1604981034209185665}
   - component: {fileID: 4204484682254762565}
   - component: {fileID: 7741724734492770376}
+  - component: {fileID: 5348973467003728226}
   m_Layer: 0
   m_Name: Herring
   m_TagString: Untagged
@@ -90,6 +91,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &5348973467003728226
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342889782683910774}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: -5624545281902316504, guid: 0b04b4ee27b36df4c94e4df3ea384a9f, type: 3}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1915371716169189145
 GameObject:
   m_ObjectHideFlags: 0
