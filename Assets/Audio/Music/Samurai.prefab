@@ -162,4 +162,5 @@ MonoBehaviour:
   KnifeSpawn0: {fileID: 0}
   KnifeSpawn1: {fileID: 0}
   KnifeSpawn2: {fileID: 0}
+  Fish: {fileID: 0}
   KnifeParent: {fileID: 0}
