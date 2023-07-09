@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class KnifeNote : MonoBehaviour
 {
-    private float dropSpeed = 40f;
+    private float dropSpeed = 70f;
     private float endy = 23.8f;
-    private float initialWaitSecond = 0.4f;
-    private float endWaitSecond = 0.2f;
+    private float initialWaitSecond = 0.5f;
+    private float endWaitSecond = 0.175f;
 
     public AudioClip yellClip;
+    public AudioClip yellClip2;
     public AudioClip dropClip;
     public AudioClip hitClip;
     private AudioSource audioSource;
@@ -23,7 +24,10 @@ public class KnifeNote : MonoBehaviour
 
     private IEnumerator NoteBehavior()
     {
-        audioSource.clip = yellClip;
+        if (transform.position.y > endy)
+            audioSource.clip = yellClip;
+        else
+            audioSource.clip = yellClip2;
         audioSource.Play();
         yield return new WaitForSeconds(initialWaitSecond);
 
