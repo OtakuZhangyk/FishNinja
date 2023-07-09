@@ -7,6 +7,7 @@ public class KnifeNote : MonoBehaviour
     private float dropSpeed = 70f;
     private float endy = 23.8f;
     private float initialWaitSecond = 0.5f;
+    private float raiseSecond = 0.5f;
     private float endWaitSecond = 0.175f;
 
     public AudioClip yellClip;
@@ -37,11 +38,13 @@ public class KnifeNote : MonoBehaviour
 
     private IEnumerator NoteBehavior()
     {
+        yield return new WaitForSeconds(initialWaitSecond);
+        
         if (transform.position.y > endy)
         {
             audioSource.clip = yellClip;
             audioSource.Play();
-            for (float i = 0f; i < initialWaitSecond; i+=Time.deltaTime)
+            for (float i = 0f; i < raiseSecond; i+=Time.deltaTime)
             {
                 transform.position += new Vector3(0, 5f * Time.deltaTime, 0);
                 yield return null;
@@ -51,7 +54,7 @@ public class KnifeNote : MonoBehaviour
         {
             audioSource.clip = yellClip2;
             audioSource.Play();
-            for (float i = 0f; i < initialWaitSecond; i+=Time.deltaTime)
+            for (float i = 0f; i < raiseSecond; i+=Time.deltaTime)
             {
                 transform.position -= new Vector3(0, 0, 5f * Time.deltaTime);
                 yield return null;
