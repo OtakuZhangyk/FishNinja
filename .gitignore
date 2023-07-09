@@ -13,6 +13,7 @@
 .vs/
 .lfs/
 .hooks/
+.vsconfig
 
 # Gradle cache directory
 .gradle/
