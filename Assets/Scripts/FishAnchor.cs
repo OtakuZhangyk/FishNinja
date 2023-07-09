@@ -7,6 +7,19 @@ public class FishAnchor : MonoBehaviour
     private Animator animator;
     private Rigidbody rb;
     private bool jumping;
+
+    private bool isCurrentlyColliding;
+
+    void OnCollisionEnter(Collision col)
+    {
+        isCurrentlyColliding = true;
+    }
+
+    void OnCollisionExit(Collision col)
+    {
+        isCurrentlyColliding = false;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +31,7 @@ public class FishAnchor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (isCurrentlyColliding && Input.GetButtonDown("Jump"))
         {
             jumping = true;
         }
@@ -26,22 +39,16 @@ public class FishAnchor : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //if (Input.GetButtonDown("Flip"))
-        {
-            float flipDir = Input.GetAxis("Flip");
-            rb.AddRelativeTorque(new Vector3(0, 0, -10 * flipDir), ForceMode.VelocityChange);
 
+        float flipDir = Input.GetAxis("Flip");
+        rb.AddRelativeTorque(new Vector3(0, 0, -10 * flipDir), ForceMode.VelocityChange);
 
-        }
-        //if (Input.GetButtonDown("Rotate"))
-        {
-            float rotateDir = Input.GetAxis("Rotate");
-            rb.AddTorque(new Vector3(0, 5 * rotateDir, 0), ForceMode.VelocityChange);
-        }
+        float rotateDir = Input.GetAxis("Rotate");
+        rb.AddTorque(new Vector3(0, 5 * rotateDir, 0), ForceMode.VelocityChange);
 
         if (jumping)
         {
-            rb.AddForce(new Vector3(0, 20, 0), ForceMode.VelocityChange);
+            rb.AddForce(new Vector3(0, 10, 0), ForceMode.VelocityChange);
             jumping = false;
         }
     }
