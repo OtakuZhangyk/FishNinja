@@ -76,7 +76,7 @@ public class KnifeNote : MonoBehaviour
         }
         else
         {
-            while (transform.position.z < 14.4f)
+            while (transform.position.z < 34.4f)
             {
                 transform.position += new Vector3(0, 0, 2f * dropSpeed * Time.deltaTime);
                 yield return null;
