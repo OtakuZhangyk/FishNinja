@@ -41,8 +41,10 @@ public class Beatmap : MonoBehaviour
             Vector3 cubeCenter = (cubeMin + cubeMax) / 2;
             Vector3 dir2Center = cubeCenter - randomPosition;
             Quaternion rotation = Quaternion.LookRotation(dir2Center);
-            //if (y > cubeCenter.y)
-            //    rotation.x += 180f;
+            Vector3 eulerRotation = rotation.eulerAngles;
+            if (z < cubeCenter.z)
+                eulerRotation.y += 180f;
+            rotation = Quaternion.Euler(eulerRotation);
 
             Instantiate(KnifeChild, randomPosition, rotation, KnifeParent.transform);
         }
