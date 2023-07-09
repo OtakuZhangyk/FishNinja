@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3333002324581990028}
   - component: {fileID: 3319766440089948054}
   - component: {fileID: 3319766440089948058}
+  - component: {fileID: -6727914575269816160}
   m_Layer: 0
   m_Name: KnifeNote
   m_TagString: Untagged
@@ -197,3 +198,17 @@ MonoBehaviour:
   yellClip2: {fileID: 8300000, guid: 82f7bcac0de4c5d4fb8cce7ef5f4e771, type: 3}
   dropClip: {fileID: 8300000, guid: 07f53459829ee094dbe035daee412e3b, type: 3}
   hitClip: {fileID: 8300000, guid: 1b06227218c50754389fc279b9e85710, type: 3}
+--- !u!64 &-6727914575269816160
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3320296480837691988}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 2c2f009d66b8e2d4ebcb46ca8e73d354, type: 3}
