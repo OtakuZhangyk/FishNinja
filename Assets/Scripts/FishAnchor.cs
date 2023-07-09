@@ -16,14 +16,27 @@ public class FishAnchor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Flip"))
+        
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.name == "KnifeNode")
+        {
+            Debug.Log("knife");
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        //if (Input.GetButtonDown("Flip"))
         {
             float flipDir = Input.GetAxis("Flip");
             rb.AddRelativeTorque(new Vector3(0, 0, -10 * flipDir), ForceMode.VelocityChange);
-            
-            
+
+
         }
-        if (Input.GetButtonDown("Rotate"))
+        //if (Input.GetButtonDown("Rotate"))
         {
             float rotateDir = Input.GetAxis("Rotate");
             rb.AddTorque(new Vector3(0, 5 * rotateDir, 0), ForceMode.VelocityChange);
@@ -31,7 +44,7 @@ public class FishAnchor : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            rb.AddForce(new Vector3(0, 5, 0), ForceMode.VelocityChange);
+            rb.AddForce(new Vector3(0, 10, 0), ForceMode.VelocityChange);
         }
     }
 }
