@@ -5,10 +5,12 @@ using UnityEngine;
 public class FishAnchor : MonoBehaviour
 {
     private Animator animator;
+    private Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -16,11 +18,15 @@ public class FishAnchor : MonoBehaviour
     {
         if (Input.GetButtonDown("Flip"))
         {
-            if (!animator.IsInTransition(0))
-            {
-                animator.SetTrigger("Flipping");
-            }
+            float flipDir = Input.GetAxis("Flip");
+            rb.AddRelativeTorque(new Vector3(0, 0, -10 * flipDir), ForceMode.VelocityChange);
             
+            
+        }
+        if (Input.GetButtonDown("Rotate"))
+        {
+            float rotateDir = Input.GetAxis("Rotate");
+            rb.AddRelativeTorque(new Vector3(0, 10 * rotateDir, 0), ForceMode.VelocityChange);
         }
     }
 }
