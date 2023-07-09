@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Beatmap : MonoBehaviour
 {
@@ -62,6 +63,17 @@ public class Beatmap : MonoBehaviour
                 Instantiate(KnifeChild, randomPosition, rotation, KnifeParent.transform);
             }
         }
+    }
+
+    public void GameOver()
+    {
+        //get score
+        //
+
+
+        //SceneTransition sceneTransition = GetComponent<SceneTransition>();
+        //sceneTransition.FadeToNextScene();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     
     

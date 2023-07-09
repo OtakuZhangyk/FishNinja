@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8541390266812915480}
   - component: {fileID: 1179934529}
   - component: {fileID: 2539048915322820981}
+  - component: {fileID: 1239325205}
   m_Layer: 0
   m_Name: Samurai
   m_TagString: Untagged
@@ -164,3 +165,17 @@ MonoBehaviour:
   KnifeSpawn2: {fileID: 0}
   Fish: {fileID: 0}
   KnifeParent: {fileID: 0}
+--- !u!114 &1239325205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661136508748145677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4630ceaf8eae7a341ab3d6f2ad27ce30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitCount: 0
+  hitCountText: {fileID: 0}

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 9ddab5a03b71f384489d7995aacb4f71
+  - enabled: 1
+    path: Assets/Scenes/EndSushi.unity
+    guid: 05b05fe059f946a49a4dd3bf6dcf45c3
   m_configObjects: {}
