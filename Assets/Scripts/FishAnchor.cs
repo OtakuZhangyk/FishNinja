@@ -19,14 +19,6 @@ public class FishAnchor : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.name == "KnifeNode")
-        {
-            Debug.Log("knife");
-        }
-    }
-
     private void FixedUpdate()
     {
         //if (Input.GetButtonDown("Flip"))

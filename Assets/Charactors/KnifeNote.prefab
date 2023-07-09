@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 3333002324581990028}
   - component: {fileID: 3319766440089948054}
   - component: {fileID: 3319766440089948058}
-  - component: {fileID: -6727914575269816160}
+  - component: {fileID: -2697382792966289469}
+  - component: {fileID: 4648828197739661424}
   m_Layer: 0
   m_Name: KnifeNote
   m_TagString: Untagged
@@ -198,8 +199,8 @@ MonoBehaviour:
   yellClip2: {fileID: 8300000, guid: 82f7bcac0de4c5d4fb8cce7ef5f4e771, type: 3}
   dropClip: {fileID: 8300000, guid: 07f53459829ee094dbe035daee412e3b, type: 3}
   hitClip: {fileID: 8300000, guid: 1b06227218c50754389fc279b9e85710, type: 3}
---- !u!64 &-6727914575269816160
-MeshCollider:
+--- !u!65 &-2697382792966289469
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -208,7 +209,18 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2c2f009d66b8e2d4ebcb46ca8e73d354, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7, y: 3.3448362, z: 0.1}
+  m_Center: {x: 1.5999999, y: -0.24938112, z: 0}
+--- !u!114 &4648828197739661424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3320296480837691988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a18aeeee302b246a94538bd563925f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
