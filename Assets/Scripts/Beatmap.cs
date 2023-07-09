@@ -5,18 +5,47 @@ using UnityEngine;
 public class Beatmap : MonoBehaviour
 {
     public GameObject KnifeChild;
-    public GameObject KnifeSpawn0;
-    public GameObject KnifeSpawn1;
+    public GameObject KnifeSpawn0;//topleft
+    public GameObject KnifeSpawn1;//bottomright
     public GameObject KnifeSpawn2;
     public GameObject KnifeParent;
     private GameObject[] SpawnPoints;
 
     public void SpawnNote()
     {
-        bool if_note = (Random.Range(0, 10) > 4);
         int randomIndex = Random.Range(0, 3);
-        if (if_note)
+        if (randomIndex == 2)
             Instantiate(KnifeChild, SpawnPoints[randomIndex].transform.position, SpawnPoints[randomIndex].transform.rotation, KnifeParent.transform);
+        else
+        {
+            Vector3 cubeMin = KnifeSpawn0.transform.position;
+            Vector3 cubeMax = KnifeSpawn1.transform.position;
+
+            //float xMin = Mathf.Min(cubeMin.x, cubeMax.x);
+            //float xMax = Mathf.Max(cubeMin.x, cubeMax.x);
+
+            float yMin = Mathf.Min(cubeMin.y, cubeMax.y);
+            float yMax = Mathf.Max(cubeMin.y, cubeMax.y);
+
+            float zMin = Mathf.Min(cubeMin.z, cubeMax.z);
+            float zMax = Mathf.Max(cubeMin.z, cubeMax.z);
+
+            //float x = Random.Range(xMin, xMax);
+            float x = cubeMin.x;
+            float y = Random.Range(yMin, yMax);
+            float z = Random.Range(zMin, zMax);
+
+            
+            Vector3 randomPosition = new Vector3(x, y, z);
+
+            Vector3 cubeCenter = (cubeMin + cubeMax) / 2;
+            Vector3 dir2Center = cubeCenter - randomPosition;
+            Quaternion rotation = Quaternion.LookRotation(dir2Center);
+            //if (y > cubeCenter.y)
+            //    rotation.x += 180f;
+
+            Instantiate(KnifeChild, randomPosition, rotation, KnifeParent.transform);
+        }
     }
     
     
