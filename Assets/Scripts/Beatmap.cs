@@ -14,7 +14,8 @@ public class Beatmap : MonoBehaviour
 
     public void SpawnNote(int i = 0)
     {
-        if (i != 0)
+        //if (i != 0)
+        if (true)
         {
             int randomIndex = Random.Range(0, 3);
             if (randomIndex == 2)
