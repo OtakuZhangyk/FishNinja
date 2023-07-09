@@ -11,6 +11,8 @@
 
 # Visual Studio cache directory
 .vs/
+.lfs/
+.hooks/
 
 # Gradle cache directory
 .gradle/
