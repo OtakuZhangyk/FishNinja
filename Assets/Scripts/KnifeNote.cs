@@ -14,10 +14,23 @@ public class KnifeNote : MonoBehaviour
     public AudioClip dropClip;
     public AudioClip hitClip;
     private AudioSource audioSource;
+
+    private KnifeTrigger otherScript;
     
     // Start is called before the first frame update
     void Start()
     {
+        // Get a reference to the other script
+        otherScript = GetComponent<KnifeTrigger>();
+        // Check if the other script is found, if not, log an error message
+        if (otherScript == null)
+        {
+            Debug.LogError("Other script not found!");
+            return;
+        }
+        // Disable the other script
+        otherScript.enabled = false;
+
         audioSource = GetComponent<AudioSource>();
         StartCoroutine(NoteBehavior());
     }
@@ -49,6 +62,7 @@ public class KnifeNote : MonoBehaviour
         // Start dropping
         audioSource.clip = dropClip;
         audioSource.Play();
+        otherScript.enabled = true;
         if (transform.position.y > endy)
         {
             while (transform.position.y > endy)
