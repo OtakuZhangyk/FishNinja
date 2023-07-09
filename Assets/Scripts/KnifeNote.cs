@@ -25,11 +25,26 @@ public class KnifeNote : MonoBehaviour
     private IEnumerator NoteBehavior()
     {
         if (transform.position.y > endy)
+        {
             audioSource.clip = yellClip;
+            audioSource.Play();
+            for (float i = 0f; i < initialWaitSecond; i+=Time.deltaTime)
+            {
+                transform.position += new Vector3(0, 5f * Time.deltaTime, 0);
+                yield return null;
+            }
+        }
         else
+        {
             audioSource.clip = yellClip2;
-        audioSource.Play();
-        yield return new WaitForSeconds(initialWaitSecond);
+            audioSource.Play();
+            for (float i = 0f; i < initialWaitSecond; i+=Time.deltaTime)
+            {
+                transform.position -= new Vector3(0, 0, 5f * Time.deltaTime);
+                yield return null;
+            }
+        }
+        //yield return new WaitForSeconds(initialWaitSecond);
 
         // Start dropping
         audioSource.clip = dropClip;
