@@ -28,5 +28,10 @@ public class FishAnchor : MonoBehaviour
             float rotateDir = Input.GetAxis("Rotate");
             rb.AddTorque(new Vector3(0, 5 * rotateDir, 0), ForceMode.VelocityChange);
         }
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            rb.AddForce(new Vector3(0, 5, 0), ForceMode.VelocityChange);
+        }
     }
 }
