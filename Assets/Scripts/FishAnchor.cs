@@ -41,14 +41,14 @@ public class FishAnchor : MonoBehaviour
     {
 
         float flipDir = Input.GetAxis("Flip");
-        rb.AddRelativeTorque(new Vector3(0, 0, -10 * flipDir), ForceMode.VelocityChange);
+        rb.AddRelativeTorque(new Vector3(0, 0, -12 * flipDir), ForceMode.VelocityChange);
 
         float rotateDir = Input.GetAxis("Rotate");
         rb.AddTorque(new Vector3(0, 5 * rotateDir, 0), ForceMode.VelocityChange);
 
         if (jumping)
         {
-            rb.AddForce(new Vector3(0, 10, 0), ForceMode.VelocityChange);
+            rb.AddForce(new Vector3(0, 12, 0), ForceMode.VelocityChange);
             jumping = false;
         }
     }
